@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time
 
-browser = "chrome"
+browser = ""
 
 if browser.lower() == "chrome":
     driver = webdriver.Chrome(executable_path=r"/Users/kapilnegi/Desktop/chromedriver")

@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import time
 
 driver = webdriver.Chrome(executable_path=r"/Users/kapilnegi/Desktop/chromedriver")
@@ -6,6 +7,7 @@ driver = webdriver.Chrome(executable_path=r"/Users/kapilnegi/Desktop/chromedrive
 driver.get("http://demo.guru99.com/test/radio.html")
 
 radio1 = driver.find_element_by_id("vfb-7-1")
+#radio1 = driver.find_element(By.XPATH, "//input[@value='Option 1']")
 radio2 = driver.find_element_by_id("vfb-7-2")
 
 # time.sleep(3)
@@ -49,4 +51,5 @@ for _ in range(2):
     print("Facebook Persists Checkbox Status is -  ",
           chkFBPersist.is_selected())
 
+driver.close()
 driver.quit()
