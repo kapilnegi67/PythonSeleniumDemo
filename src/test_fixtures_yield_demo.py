@@ -1,11 +1,12 @@
 import pytest
 
 
-@pytest.yield_fixture()
+@pytest.fixture()
 def setup():
     print("Before Test")
     yield
     print("After Test")
+    print("After Test2")
 
 
 def test_tm1(setup):

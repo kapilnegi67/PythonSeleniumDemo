@@ -6,6 +6,6 @@ test_data = [[1, 2, 3],
              ]
 
 
-@pytest.mark.parametrize("value1, value2, result", test_data)
+@pytest.mark.parametrize("value1", "value2", "result", test_data)
 def test_generic_add(value1, value2, result):
     assert AF.addition(value1, value2) == result
